@@ -2,7 +2,7 @@ const assignmentComponent = Vue.createApp({
   data() {
     return {
       name: "michael",
-      age: 0,
+      age: 31,
       ageInFiveYears: 0,
       randomNumber: 0,
       imageUrl:
@@ -13,6 +13,9 @@ const assignmentComponent = Vue.createApp({
     getRandomNumber() {
       this.randomNumber = Math.random();
     },
+    calculateAge(){
+        return this.age + 5;
+    }
   },
   mounted() {
     this.getRandomNumber();
