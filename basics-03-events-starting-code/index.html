@@ -22,17 +22,20 @@
       <button v-on:click="subtract(5)">Remove</button>
       <p v-once>starting counter: {{ counter }}</p>
       <p>Result: {{ counter }}</p>
-      <input
+      <!-- <input
         v-on:input="setName($event, lastName)"
         v-on:keyup.enter="setConfirmedName"
       />
-      <p>confirmedName: {{ confirmedName }}</p>
+      <p>confirmedName: {{ confirmedName }}</p> -->
       <input v-model="name" />
-      <p>{{ name }}</p>
+      <input v-model="lastName" />
+      <p>name: {{ name }}</p>
+      <p>lastname: {{ lastName }}</p>
+      <!-- <p>fullname by watcher: {{ name }}</p> -->
       <button @click="resetInput">Reset button</button>
-      <p>{{ outputFullName }}</p>
+      <p>fullname by computed :{{ outputFullName }}</p>
       <form @submit.prevent="submitForm">
-        <input type="text" />
+        <!-- <input type="text" /> -->
         <button>sign up</button>
       </form>
     </section>
